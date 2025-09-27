@@ -1,4 +1,3 @@
-require 'pry-byebug'
 
 class GraphNode
 
@@ -39,7 +38,7 @@ class Graph
     end
   end
   
-  #For each square, finds squares within a valid 'Knight' chess move away and creates an edge between them
+  #For each square(node), finds squares within a valid 'Knight' chess move away and creates an edge between them
   def find_moves
     self.nodes.each do |key, node|
       x = key[0]
@@ -117,5 +116,5 @@ end
 graph = Graph.new
 graph.build_board
 graph.find_moves
-graph.knight_moves([0, 0], [6, 6])
+graph.knight_moves([0, 0], [6, 6]) #Outputs => [[0, 0], [1, 2], [2, 4], [4, 5], [6, 6]]
 
