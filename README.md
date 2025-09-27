@@ -12,8 +12,11 @@ easily for future projects.
 KEY FEATURE
 
     - #knight_moves is essentially a Breadth First Search of Graph nodes, where a parent map
-      of each node is constructed in a hash.
+      of each node is stored in a hash.
 
-    - parent map is then traversed from final position back to start and positions added to a list
+    - Parent map is then traversed from final position back to start and points then added to 
+      a list
 
     - List contains shortest path between given nodes(squares) and is printed in reverse order
+
+        ie. #knight_moves([0, 0], [6, 6]) => [[0, 0], [1, 2], [2, 4], [4, 5], [6, 6]]
